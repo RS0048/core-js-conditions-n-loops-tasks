@@ -131,8 +131,97 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let newStr = '';
+  for (let i = 0; i < numberStr.length - 1; i += 1) {
+    switch (numberStr[i]) {
+      case '1':
+        newStr += 'one ';
+        break;
+      case '2':
+        newStr += 'two ';
+        break;
+      case '3':
+        newStr += 'three ';
+        break;
+      case '4':
+        newStr += 'four ';
+        break;
+      case '5':
+        newStr += 'five ';
+        break;
+      case '6':
+        newStr += 'six ';
+        break;
+      case '7':
+        newStr += 'seven ';
+        break;
+      case '8':
+        newStr += 'eight ';
+        break;
+      case '9':
+        newStr += 'nine ';
+        break;
+      case '0':
+        newStr += 'zero ';
+        break;
+      case '-':
+        newStr += 'minus ';
+        break;
+      case '.':
+        newStr += 'point ';
+        break;
+      case ',':
+        newStr += 'point ';
+        break;
+      default:
+        break;
+    }
+  }
+  switch (numberStr[numberStr.length - 1]) {
+    case '1':
+      newStr += 'one';
+      break;
+    case '2':
+      newStr += 'two';
+      break;
+    case '3':
+      newStr += 'three';
+      break;
+    case '4':
+      newStr += 'four';
+      break;
+    case '5':
+      newStr += 'five';
+      break;
+    case '6':
+      newStr += 'six';
+      break;
+    case '7':
+      newStr += 'seven';
+      break;
+    case '8':
+      newStr += 'eight';
+      break;
+    case '9':
+      newStr += 'nine';
+      break;
+    case '0':
+      newStr += 'zero';
+      break;
+    case '-':
+      newStr += 'minus';
+      break;
+    case '.':
+      newStr += 'point';
+      break;
+    case ',':
+      newStr += 'point';
+      break;
+    default:
+      break;
+  }
+  return newStr;
 }
 
 /**
